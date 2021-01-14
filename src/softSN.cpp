@@ -74,11 +74,11 @@ void SN_VCO::onSampleRateChange()
 
 void SN_VCO::step()
 {
-	params[M_MIXER_A_PARAM].value=round(params[M_MIXER_A_PARAM].value);
-	params[M_MIXER_B_PARAM].value=round(params[M_MIXER_B_PARAM].value);
-	params[M_MIXER_C_PARAM].value=round(params[M_MIXER_C_PARAM].value);
-	params[M_ENV_KNOB].value=round(params[M_ENV_KNOB].value);
-	params[VCO_SELECT_PARAM].value=round(params[VCO_SELECT_PARAM].value);
+	// params[M_MIXER_A_PARAM].value=round(params[M_MIXER_A_PARAM].value);
+	// params[M_MIXER_B_PARAM].value=round(params[M_MIXER_B_PARAM].value);
+	// params[M_MIXER_C_PARAM].value=round(params[M_MIXER_C_PARAM].value);
+	// params[M_ENV_KNOB].value=round(params[M_ENV_KNOB].value);
+	// params[VCO_SELECT_PARAM].value=round(params[VCO_SELECT_PARAM].value);
 
 	// Calculate VCO and SLF Oscillator Voltages
 	double volts = 1.752 * powf(2.0f, -1 * (inputs[EXT_VCO].value + (params[m_vco_res].value - 4 + (params[VCO_SELECT_PARAM].value * 6.223494))));
